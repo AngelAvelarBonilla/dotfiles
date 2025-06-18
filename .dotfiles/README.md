@@ -1,6 +1,6 @@
-# Dotfiles
+# dotfiles
 This is a repository for syncing my configuration files (dotfiles) across all my workspaces. 
-This includes configurations files for: Zsh, Neovim, Tmux
+This includes configuration files for: Zsh, Neovim, Tmux
 
 # Usage
 - Set path to dotfiles repo
