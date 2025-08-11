@@ -12,4 +12,7 @@ end
 -- This file is symlinked from Windows to where it lives on WSL2 Ubuntu
 config.default_domain = 'WSL:Ubuntu-24.04'
 
+config.font = wezterm.font('JetBrains Mono')
+config.font_size = 14
+
 return config
