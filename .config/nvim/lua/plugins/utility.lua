@@ -11,4 +11,8 @@ return {
       require("nvim-tree").setup({})
     end,
   },  
+  {
+    "kylechui/nvim-surround",
+    config = true
+  },
 }
