@@ -15,4 +15,8 @@ config.default_domain = 'WSL:Ubuntu-24.04'
 config.font = wezterm.font('JetBrains Mono')
 config.font_size = 14
 
+config.color_scheme = "Catppuccin Mocha"
+
+config.audible_bell = "Disabled"
+
 return config
