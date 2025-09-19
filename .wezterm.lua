@@ -19,4 +19,6 @@ config.color_scheme = "Catppuccin Mocha"
 
 config.audible_bell = "Disabled"
 
+config.window_background_image = "C:/Users/liasf/Pictures/ow-blurred.png"
+
 return config
