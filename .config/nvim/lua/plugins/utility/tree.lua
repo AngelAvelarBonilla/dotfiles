@@ -1,9 +1,4 @@
--- Utility & Tools plugins
 return {
-  {
-    "nvim-telescope/telescope.nvim",
-    dependencies = { "nvim-lua/plenary.nvim" }
-  },
   {
     "nvim-tree/nvim-tree.lua",
     dependencies = { "nvim-tree/nvim-web-devicons" },
@@ -11,8 +6,4 @@ return {
       require("nvim-tree").setup({})
     end,
   },  
-  {
-    "kylechui/nvim-surround",
-    config = true
-  },
 }
