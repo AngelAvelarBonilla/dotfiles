@@ -3,8 +3,28 @@ return {
   dependencies = {
     "williamboman/mason-lspconfig.nvim",
   },
-  config = function ()
-    local mason = requre("mason")
+  config = function()
+    local mason = require("mason")
     local mason_lspconfig = require("mason-lspconfig")
 
-    mason.setup 
+    mason.setup({
+      ui = {
+        icons = {
+          package_installed = "✓",
+          package_pending = "➜",
+          package_uninstalled = "✗",
+        },
+      },
+    })
+
+    mason_lspconfig.setup({
+      -- ':Mason' will show the list.
+      ensure_installed = {
+        "lua_ls",
+        "laravel-ls",
+        "phpstan",
+        "pint",
+      },
+    })
+  end,
+}
