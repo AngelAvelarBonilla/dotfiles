@@ -21,9 +21,7 @@ return {
       -- ':Mason' will show the list.
       ensure_installed = {
         "lua_ls",
-        "laravel-ls",
-        "phpstan",
-        "pint",
+        "laravel_ls",
       },
     })
   end,
