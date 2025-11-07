@@ -28,6 +28,8 @@ PROMPT='%F{108}%~%f %F{white}%f$ '
 # Run 'cat' and then the key to see what the terminal emulator is sending.
 bindkey "^[[1~" beginning-of-line
 bindkey "^[[4~" end-of-line
+bindkey "^[[1;5D" backward-word
+bindkey "^[[1;5C" forward-word
 
 # Misc. options
 setopt HIST_IGNORE_SPACE
