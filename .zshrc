@@ -22,7 +22,12 @@ precmd() { vcs_info }
 zstyle ':vcs_info:git:*' formats '%b '
 
 setopt PROMPT_SUBST
-PROMPT='%F{108}%~%f %F{white}${vcs_info_msg_0_}%f$ '
+PROMPT='%F{108}%~%f %F{white}%f$ '
+
+# Key Bindings for navigation keys
+# Run 'cat' and then the key to see what the terminal emulator is sending.
+bindkey "^[[1~" beginning-of-line
+bindkey "^[[4~" end-of-line
 
 # Misc. options
 setopt HIST_IGNORE_SPACE
