@@ -18,7 +18,25 @@ local is_mac = wezterm.target_triple:find("apple") ~= nil
 
 if is_mac then
     -- macOS-specific settings
+    local act = wezterm.action
     config.font_size = 16
+    config.keys = {
+      -- Process Interrupt
+      { key = 'c', mods = 'CMD', action = act.SendKey { key = 'c', mods = 'CTRL' } },
+      
+      -- Suspend process
+      { key = 'z', mods = 'CMD', action = act.SendKey { key = 'z', mods = 'CTRL' } },
+      
+      -- Exit terminal / EOF
+      { key = 'd', mods = 'CMD', action = act.SendKey { key = 'd', mods = 'CTRL' } },
+      
+      -- Send Ctrl + V to the application
+      { key = 'v', mods = 'CMD', action = act.SendKey { key = 'v', mods = 'CTRL' } },
+      
+      -- Send Ctrl + " " to the application (for Tmux)
+      { key = ' ', mods = 'CMD', action = act.SendKey { key = ' ', mods = 'CTRL' } },
+    }
+
 else
     -- Windows settings
     -- We kick off wezterm from Windows side
