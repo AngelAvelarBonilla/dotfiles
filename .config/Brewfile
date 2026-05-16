@@ -1,0 +1,2 @@
+brew "tmux"
+cask "alt-tab"
