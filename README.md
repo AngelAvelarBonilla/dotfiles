@@ -11,6 +11,8 @@ This includes configuration files for: Zsh, Neovim, Tmux
 `alias gitdotfiles='git --git-dir=$DOTFILES_PATH/ --work-tree=$HOME'`
 - Tell git to only show files we explicitly track
 `gitdotfiles config --local status.showUntrackedFiles no`
+- Checkout the dotfiles
+`gitdotfiles checkout`
 - Use alias in place of regular git command
 `dotgitfiles add .bashrc`
 `dotgitfiles commit -m "<YOUR COMMIT MESSAGE>"`
