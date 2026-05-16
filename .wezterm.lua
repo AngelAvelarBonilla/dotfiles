@@ -30,8 +30,11 @@ if is_mac then
       -- Exit terminal / EOF
       { key = 'd', mods = 'CMD', action = act.SendKey { key = 'd', mods = 'CTRL' } },
       
-      -- Send Ctrl + V to the application
+      -- Send Ctrl + V to the application (for neovim)
       { key = 'v', mods = 'CMD', action = act.SendKey { key = 'v', mods = 'CTRL' } },
+      
+      -- Send Ctrl + W to the application (for neovim)
+      { key = 'w', mods = 'CMD', action = act.SendKey { key = 'w', mods = 'CTRL' } },
       
       -- Send Ctrl + " " to the application (for Tmux)
       { key = ' ', mods = 'CMD', action = act.SendKey { key = ' ', mods = 'CTRL' } },
