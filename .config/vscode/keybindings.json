@@ -1,0 +1,59 @@
+[
+    // Toggle Terminal
+    {
+        "key": "cmd+e",
+        "command": "runCommands",
+        "args": {
+            "commands": [
+                "workbench.action.focusActiveEditorGroup",
+                "workbench.action.terminal.toggleTerminal",
+            ]
+        },
+        "when": "terminalFocus"
+    },
+    {
+        "key": "cmd+e",
+        "command": "runCommands",
+        "args": {
+            "commands": [
+                "workbench.action.terminal.toggleTerminal",
+                "workbench.action.terminal.focus",
+                "workbench.action.toggleMaximizedPanel",
+            ]
+        },
+        "when": "!terminalFocus"
+    },
+    // Suggestion Traversal
+    {
+        "key": "cmd+j",
+        "command": "selectNextSuggestion",
+        "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
+    },
+    {
+        "key": "cmd+k",
+        "command": "selectPrevSuggestion",
+        "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
+    },
+    {
+        "key": "cmd+space",
+        "command": "editor.action.triggerSuggest",
+        "when": "editorHasCompletionItemProvider && textInputFocus && !editorReadonly"
+    },
+    // Vim-like file searching
+    {
+        "key": "space f f",
+        "command": "workbench.action.quickOpen",
+        "when": "editorTextFocus && vim.mode == 'Normal'" 
+    },
+    {
+        // TODO need to add bind to close this menu
+        "key": "space f g",
+        "command": "workbench.action.findInFiles",
+        "when": "editorTextFocus && vim.mode == 'Normal'" 
+    },
+    {
+        "key": "space f r",
+        "command": "workbench.action.openRecent",
+        "when": "editorTextFocus && vim.mode == 'Normal'" 
+    },
+]

@@ -15,6 +15,9 @@ compinit
 export DOTFILES_PATH="$HOME/.dotfiles/"
 alias gitdotfiles='git --git-dir=$DOTFILES_PATH/ --work-tree=$HOME'
 
+# VS Code Configuration
+ln -sf ~/.config/vscode/keybindings.json ~/Library/Application\ Support/Code/User/keybindings.json
+
 # Prompt Customization
 autoload -Uz vcs_info
 precmd() { vcs_info }

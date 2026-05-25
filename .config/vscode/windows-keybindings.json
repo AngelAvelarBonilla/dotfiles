@@ -1,0 +1,28 @@
+[
+    {
+        "key": "ctrl+e",
+        "command": "runCommands",
+        "args": {
+            "commands": [
+                "workbench.action.focusActiveEditorGroup",
+                "workbench.action.terminal.toggleTerminal",
+            ]
+        },
+        "when": "terminalFocus"
+    },
+    {
+        "key": "ctrl+e",
+        "args": {
+            "commands": [
+                "workbench.action.terminal.toggleTerminal",
+                "workbench.action.terminal.focus",
+                "workbench.action.toggleMaximizedPanel",
+            ]
+        },
+        "when": "!terminalFocus"
+    },
+    {
+        "key": "ctrl+p",
+        "command": "workbench.action.quickOpen",
+    },
+]
