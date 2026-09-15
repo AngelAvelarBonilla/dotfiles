@@ -36,6 +36,9 @@ if is_mac then
       -- Send Ctrl + W to the application (for neovim)
       { key = 'w', mods = 'CMD', action = act.SendKey { key = 'w', mods = 'CTRL' } },
       
+      -- Paste
+      { key = 'p', mods = 'CMD', action = act.PasteFrom 'Clipboard'},
+
       -- Send Ctrl + " " to the application (for Tmux)
       { key = ' ', mods = 'CMD', action = act.SendKey { key = ' ', mods = 'CTRL' } },
     }
